@@ -8,6 +8,7 @@ import { requestLoggerConfig } from "./util/requestLogger";
 import { errorLoggerConfig } from "./util/errorLogger";
 import { userRouter } from "./routes/user";
 import { sessionRouter } from "./routes/session";
+import { storeRouter } from "./routes/store";
 
 export const port: Number = parseInt(process.env.SERVER_PORT) || 3000;
 const app: Application = express();
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV != "test") app.use(errorLoggerConfig);
 if (process.env.NODE_ENV != "production") swaggerDoc(app);
 app.use("/users", userRouter);
 app.use("/sessions", sessionRouter);
+app.use("/stores", storeRouter);
 
 
 app.use((req: Request, res: Response) => {

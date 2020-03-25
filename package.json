@@ -53,6 +53,7 @@
         "swagger-ui-express": "^4.0.2",
         "tslint": "^5.16.0",
         "typescript": "^3.4.5",
-        "winston": "^3.2.1"
+        "winston": "^3.2.1",
+        "zipcodes": "^8.0.0"
     }
 }
